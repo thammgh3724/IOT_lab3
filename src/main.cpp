@@ -35,8 +35,8 @@
 #define ENCRYPTED false
 #define THINGSBOARD_ENABLE_PROGMEM 0 
 DHT20 dht20;
-const char *WIFI_SSID = "QuocPhong";
-const char *WIFI_PASSWORD = "quocphong2003";
+const char *WIFI_SSID = "ACLAB";
+const char *WIFI_PASSWORD = "ACLAB2023";
 
 const char *ntpServer = "pool.ntp.org";
 constexpr char TOKEN[] = "VbZ7qInI8ZliEFmkPKYW";
@@ -433,7 +433,7 @@ void setup()
   xTaskCreate(thingsboardTask, "Things Board Task", 8192, NULL, 2, NULL);
   xTaskCreate(dht20Task, "DHT Task", 8192, NULL, 3, NULL);
   // xTaskCreate(blinkingLed, "blink LED Task", 4096, NULL, 1, NULL);
-}
+} 
 
 void loop() {
 }
